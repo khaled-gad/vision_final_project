@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photorealistic Style Transfer - WCT2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fa;
+    }
+    header {
+      background: #0e1842;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #111827;
+    }
+    section {
+      margin: 2rem 0;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .image-row {
+        width: 350px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .image-row img {
+        flex: 1 1 30%;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    .image-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.image-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.column-label {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #374151;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color: white">A Closed-form Solution to Photorealistic<br> Image Stylization</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Abstract</h2>
+      <p>
+        Photorealistic image stylization involves transferring the style of a reference photo to a content photo
+        while ensuring the result remains photorealistic. This project implements the method proposed in the paper
+        <a href="https://arxiv.org/pdf/1802.06474" target="_blank">"A Closed-form Solution to Photorealistic Image Stylization"</a>,
+        featuring a two-step process:
+      </p>
+      <ul>
+        <li><strong>Stylization Step:</strong> Whitening and Coloring Transforms (WCT)</li>
+        <li><strong>Smoothing Step:</strong> Manifold ranking algorithm to preserve spatial consistency</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>End-to-end model, stylizes 1024×1024 images in 4.7 seconds</li>
+        <li>Maintains photorealistic textures and structures</li>
+        <li>Handles transformations like day-to-night or season changes</li>
+        <li>Stable video stylization across frames</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <div class="image-columns">
+        <div class="image-column">
+          <img src="images/pyramids1.jpg" alt="Pyramids 1">
+          <img src="images/eiffel1.jpg" alt="Eiffel 1">
+          <img src="images/forest1.jpg" alt="Forest 1">
+          <p class="column-label">Content</p>
+        </div>
+        <div class="image-column">
+          <img src="images/pyramids2.jpg" alt="Pyramids 2">
+          <img src="images/eiffel2.jpg" alt="Eiffel 2">
+          <img src="images/forest2.jpg" alt="Forest 2">
+          <p class="column-label">Style</p>
+        </div>
+        <div class="image-column">
+          <img src="images/pyramids_output.jpg" alt="Pyramids Output">
+          <img src="images/eiffel_output.jpg" alt="Eiffel Output">
+          <img src="images/forest_output.jpg" alt="Forest Output">
+          <p class="column-label">Output</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Implementation Details</h2>
+      <ul>
+        <li><strong>Framework:</strong> PyTorch</li>
+        <li><strong>Techniques:</strong> WCT, wavelet transforms</li>
+        <li><strong>Performance:</strong> Real-time stylization of high-res images</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://arxiv.org/pdf/1802.06474" target="_blank">Paper: A Closed-form Solution to Photorealistic Image Stylization</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        For questions or collaborations, feel free to reach out:<br>
+        Email: <a href="mailto:khaled.gad@ejust.edu.eg">khaled.gad@ejust.eud.eg</a><br>
+        Email: <a href="mailto:steven.yakoub@ejust.edu.eg">steven.yakoub@ejust.edu.eg</a><br>
+        Email: <a href="mailto:anas.awadallah@ejust.edu.eg">anas.awadallah@ejust.edu.eg</a><br>
+        <br>
+        GitHub: <a href="https://github.com/khaled-gad/Vision_final_project" target="_blank">Vision Final Project</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html> 
