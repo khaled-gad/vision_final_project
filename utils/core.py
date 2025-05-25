@@ -1,11 +1,10 @@
 """
-from photo_wct.py of https://github.com/NVIDIA/FastPhotoStyle
-Copyright (C) 2018 NVIDIA Corporation.
-Licensed under the CC BY-NC-SA 4.0
-
-Core utilities for Whitening and Coloring Transform operations.
+Core functionality for style transfer operations.
 """
+
 import torch
+import torch.nn as nn
+import torch.nn.functional as F
 import numpy as np
 from PIL import Image
 
