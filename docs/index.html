@@ -39,6 +39,9 @@
     img {
       max-width: 100%;
       border-radius: 8px;
+      object-fit: cover;
+      height: 300px;
+      width: 100%;
     }
     a {
       color: #2563eb;
@@ -53,47 +56,50 @@
       font-size: 0.9rem;
       color: #555;
     }
-    .image-row {
-        width: 350px;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-        margin-top: 1rem;
-        flex-wrap: wrap;
-    }
-
-    .image-row img {
-        flex: 1 1 30%;
-        max-width: 100%;
-        border-radius: 8px;
-    }
     .image-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.image-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.image-column img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.column-label {
-  text-align: center;
-  margin-top: 0.5rem;
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: #374151;
-}
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 1rem;
+      align-items: center;
+    }
+    .image-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .column-label {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #374151;
+    }
+    .flow-arrow {
+      font-size: 2rem;
+      color: #0e1842;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+    }
+    .plus-sign {
+      font-size: 2rem;
+      color: #0e1842;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+    }
+    .image-container {
+      position: relative;
+      width: 100%;
+    }
+    .image-container img {
+      display: block;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
@@ -129,21 +135,32 @@
       <h2>Results</h2>
       <div class="image-columns">
         <div class="image-column">
-          <img src="images/pyramids1.jpg" alt="Pyramids 1">
-          <img src="images/eiffel1.jpg" alt="Eiffel 1">
-          <img src="images/forest1.jpg" alt="Forest 1">
+          <div class="image-container">
+            <img src="images/pyramids1.jpg" alt="Pyramids 1">
+          </div>
+          <div class="image-container">
+            <img src="images/eiffel1.jpg" alt="Eiffel 1">
+          </div>
           <p class="column-label">Content</p>
         </div>
+        <div class="plus-sign">+</div>
         <div class="image-column">
-          <img src="images/pyramids2.jpg" alt="Pyramids 2">
-          <img src="images/eiffel2.jpg" alt="Eiffel 2">
-          <img src="images/forest2.jpg" alt="Forest 2">
+          <div class="image-container">
+            <img src="images/pyramids2.jpg" alt="Pyramids 2">
+          </div>
+          <div class="image-container">
+            <img src="images/eiffel2.jpg" alt="Eiffel 2">
+          </div>
           <p class="column-label">Style</p>
         </div>
+        <div class="flow-arrow">→</div>
         <div class="image-column">
-          <img src="images/pyramids_output.jpg" alt="Pyramids Output">
-          <img src="images/eiffel_output.jpg" alt="Eiffel Output">
-          <img src="images/forest_output.jpg" alt="Forest Output">
+          <div class="image-container">
+            <img src="images/pyramids_output.jpg" alt="Pyramids Output">
+          </div>
+          <div class="image-container">
+            <img src="images/eiffel_output.jpg" alt="Eiffel Output">
+          </div>
           <p class="column-label">Output</p>
         </div>
       </div>
