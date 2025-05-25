@@ -71,8 +71,8 @@ streamlit run app.py
 
 For questions or collaborations, feel free to reach out:
 - Khaled Gad: [khaled.gad@ejust.edu.eg](mailto:khaled.gad@ejust.edu.eg)
-- Steven Yakoub: [steven.yakoub@ejust.edu.eg](mailto:steven.yakoub@ejust.edu.eg)
 - Anas Awadallah: [anas.awadallah@ejust.edu.eg](mailto:anas.awadallah@ejust.edu.eg)
+- Steven Yakoub: [steven.yakoub@ejust.edu.eg](mailto:steven.yakoub@ejust.edu.eg)
 
 ## License
 
